@@ -6,3 +6,7 @@ public class App {
 
     }
 }
+
+class Player{
+    int position = 0;
+}
