@@ -9,4 +9,9 @@ public class App {
 
 class Player{
     int position = 0;
+
+    int rollDice(){
+        Random random = new Random();
+        return random.nextInt(1,6);
+    }
 }
