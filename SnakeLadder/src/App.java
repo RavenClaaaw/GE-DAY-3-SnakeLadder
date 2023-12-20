@@ -4,22 +4,32 @@ public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("-- SNAKE LADDER --");
         
-        Player player = new Player();
-        while(player.position < 100){
-            int current = player.position;
+        Player player1 = new Player();
+        Player player2 = new Player();
 
-            System.out.println("Current Position: " + player.position);
+        while(player1.position < 100 && player2.position < 100){
+            int current1 = player1.position;
+            int current2 = player2.position;
+
+            System.out.println("Current Position: " + player1.position + " & " + player2.position);
             
-            player.play();
-            if(player.position == 100){
-                System.out.println("WIN!");
-                System.out.println("TOTAL DICE ROLLS: " + player.totalcount);
-            }
-            if(player.position > 100 || player.position < 0){
-                player.position = current;
+            player1.play();
+            player2.play();
+            if(player1.position == 100 || player2.position == 100){
+                if(player1.position == 100) System.out.println("PLAYER - 1: WIN!");
+                else System.out.println("PLAYER - 2: WIN!");
+                // System.out.println("TOTAL DICE ROLLS: " + player.totalcount);
             }
 
-            System.out.println("Moved To: " + player.position);
+            // Condition Check
+            if(player1.position > 100 || player1.position < 0){
+                player1.position = current1;
+            }
+            if(player2.position > 100 || player2.position < 0){
+                player2.position = current2;
+            }
+
+            System.out.println("Moved To: " + player1.position + " & " + player1.position);
         }
         
     }
