@@ -29,7 +29,7 @@ public class App {
                 player2.position = current2;
             }
 
-            System.out.println("Moved To: " + player1.position + " & " + player1.position);
+            System.out.println("Moved To: " + player1.position + " & " + player2.position);
         }
         
     }
